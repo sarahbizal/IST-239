@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 6 Assignment 1</title>
+    <script type = "text/javascript">
+        function average_grade(exam1, exam2, exam3)
+        {
+            return (exam1 + exam2 + exam3) / 3;
+        }
+
+        function letter_grade(numeric_grade)
+        {
+            var grade_letter = "F";
+
+            if (numeric_grade >= 91)
+            {
+                grade_letter = "A";
+            }
+            else if (numeric_grade >= 81)
+            {
+                grade_letter = "B";
+            }
+            else if (numeric_grade >= 71)
+            {
+                grade_letter = "C";
+            }
+            else if (numeric_grade >=65)
+            {
+                grade_letter = "D";
+            }
+
+            return grade_letter;
+        }
+
+        function grade_message(grade_letter)
+        {
+            switch (grade_letter) {
+                case "A":
+                    document.write("Great job, keep it up!");
+
+                    break;
+
+                case "B":
+                    document.write("Very nice work");
+
+                    break;
+
+                case "C":
+                    document.write("You can do it! Keep studying.");
+
+                    break;
+
+                case "D":
+                    document.write("You need some help. Please see the teacher.");
+
+                    break;
+
+                case "F":
+                    document.write("Please make an appointment with your advisor.");
+
+                    break;
+
+                default:
+                    document.write("We're sorry. This is not a letter grade.")
+
+            }
+        }
+
+        function getNumber(message)
+        {
+            return Number(prompt(message, ""));
+        }
+
+
+    </script>
+    <style>
+        body
+            {
+                background-color: grey;
+            }
+    </style>
+</head>
+<body>
+    <script type = "text/javascript">
+    var exam1 = getNumber("Please enter the whole number grade for Exam 1");
+    var exam2 = getNumber("Please enter the whole number grade for Exam 2");
+    var exam3 = getNumber("Please enter the whole number grade for Exam 3");
+
+    var average = average_grade(exam1, exam2, exam3);
+    var course_grade = letter_grade(average);
+
+    document.write("Your 3 exam scores: </br>");
+    document.write("Exam 1: " + exam1 + "</br>");
+    document.write("Exam 2: " + exam2 + "</br>");
+    document.write("Exam 3: " + exam3 + "</br>");
+    document.write("Average: " + average.toFixed(0) + "</br>");
+    document.write("Course Grade:" + course_grade + "</br>");
+    grade_message(course_grade);
+
+    </script>
+
+</body>
+
+
+</html>

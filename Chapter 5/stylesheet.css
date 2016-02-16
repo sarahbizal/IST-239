@@ -1,0 +1,89 @@
+body{
+  background-color: #015c7a;
+  text-align: center;
+}
+
+header{
+  width: 90%;
+  margin: 10px auto;
+}
+
+.business_name{
+  width: 100%;
+  padding: 5px;
+  border: 3px solid white;
+  border-radius: 20px;
+  box-shadow: 10px 10px #3e1f16;
+  background-color: #dd395a;
+}
+
+nav{
+  background-color:#940214;
+  width: 96%;
+  padding: 10px 2%;
+}
+
+nav table{
+  width: 96%;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:link{
+  color: #a9d11c;
+}
+
+a:visited{
+  color: #e8c001;
+}
+
+section{
+  float: left;
+  width: 65%;
+  padding: 0px 10px;
+}
+
+aside{
+  float: left;
+  width: 120px;
+  padding: 50px 10px;
+  border-style: groove;
+  border-color: #940214;
+}
+
+footer{
+  background-color: #583e4c;
+  color: #e49c6f;
+  width: 96%;
+  padding: 10px 2%;
+  overflow: auto;
+}
+
+footer table{
+  width: 96%;
+}
+
+.SocialLinks{
+  float: right;
+  width: 35%;
+}
+
+.SocialLinks i {
+  margin-right: 1%;
+}
+
+@media screen and (min-width: 768px){
+  body{
+    background-color: #015c7a;
+  }
+
+  nav{
+    background-color: #940214;
+  }
+
+  footer{
+    background-color: #4a5060;
+  }
+}

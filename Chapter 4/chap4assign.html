@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 4 Assignment</title>
+    <script type="text/javascript">
+        function calculate_pay(hours_worked, hourly_pay, tax_rate)
+        {
+            var gross_pay = hours_worked * hourly_pay;
+            var tax_taken = gross_pay * tax_rate;
+            var net_pay = gross_pay - tax_taken;
+
+            return net_pay;
+        }
+    </script>
+    <style>
+        body
+        {
+            background-color:lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var hours_worked = prompt("How many hours have you worked?", "");
+    var hourly_pay = prompt("What is your hourly pay rate?", "");
+    var tax_rate = prompt("What is your tax rate?", "");
+
+    var net_pay = calculate_pay(hours_worked, hourly_pay, tax_rate);
+
+    document.write("<h1>Hours Worked: " + hours_worked + "</h1>");
+    document.write("<h1>Hourly Payrate: $ " + hourly_pay + "</h1>");
+    document.write("<h1>Tax Rate Applied: " + tax_rate + "%</h1>");
+    document.write("<h1>Net Pay = " + net_pay + "</h1>");
+    </script>
+</body>
+</html>

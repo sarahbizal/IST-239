@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "utf-8">
+    <title>Chapter 5 Assignment</title>
+    <meta name = "description" content = "This is about Around The World: Informative Trip Agency">
+    <link rel="stylesheet" href = "stylesheet.css">
+
+    <script type="text/javascript">
+        var brit_pound = 0.6966;
+        var swiss_franc = 1.013;
+        var aussie_dollar = 1.411;
+        var poslish_zloty = 4.077;
+        var turk_lira = 2.971;
+
+        function calc_exchange(amount, conversion_rate) {
+            return (amount * conversion_rate).toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <table>
+          <td><a href = "#">Home</a></td>
+          <td><a href = "#">About Us</a></td>
+          <td><a href = "#">Trip Planning Services</a></td>
+          <td><a href = "#">Currency Exchange and Traveling Tips</a></td>
+          <td><a href = "#">Costs</a></td>
+        </table>
+    </nav>
+
+    <header>
+      <div class = "business_name">
+        <h1>Around the World: Informative Trips to Unique Places</h1>
+      </div>
+    </header>
+
+    <section>
+        <h1>What We Offer</h1>
+        <p>At Around the World, it is our goal it take you on a trip of a life time.
+            We not only want to make your vacation time fun but informative as well. You will
+            experience the culture first hand as you bask in the sun, play on beaches, and shop
+            in the local markets. Our trips are aimed at expanding your horizon of not only the
+            world and its people but of who you are as well. So pack your bags, gather your children,
+            and prepare to travel the world in a way you've never seen before! </p>
+    </section>
+
+    <aside>
+    <script type="text/javascript">
+        var us_dollars = prompt("How many U.S. dollars would you like to convert?", "");
+
+        document.write(us_dollars + "in U.S. Currency is approximately equivalent to:</br>");
+        document.write(calc_exchange(us_dollars, brit_pound) + " GBP (British Pound) <img src = 'images/great_britain.gif'></br>");
+        document.write(calc_exchange(us_dollars, swiss_franc) + " CHF (Swiss Franc) <img src = 'images/switzerland.gif'></br>");
+        document.write(calc_exchange(us_dollars, aussie_dollar) + " AUD (Austrailian Dollar) <img src = 'images/austrailia.gif'></br>");
+        document.write(calc_exchange(us_dollars, poslish_zloty) + " PLN (Polish Zloty) <img src = 'images/poland.gif'></br>");
+        document.write(calc_exchange(us_dollars, turk_lira) + " TRY (Turkish Lira) <img src = 'images/turkey.gif'></br>");
+    </script>
+</aside>
+</body>
+</html>

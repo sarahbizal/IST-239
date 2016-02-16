@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chapter 8 Assignment</title>
+
+<style>
+    body{
+        background-color: violet;
+    }
+</style>
+
+<script type="text/javascript">
+    function getChar(){
+        return prompt("Please enter your gender:")[0].toUpperCase();
+    }
+
+    function getNumber(message){
+        return Number(prompt(message, ""));
+    }
+
+</script>
+
+</head>
+<body>
+<script type="text/javascript">
+    document.write("<h1>Browser Settings: </h1>");
+
+    if(navigator.javaEnabled){
+        document.write("Java is Enabled!" + "<br>");
+    }
+    else{
+        document.write("Java is Disabled!" + "<br>");
+    }
+
+    document.write("Browser Platform: " + navigator.platform + "<br>");
+    document.write("Broswer Code Name: " + navigator.appCodeName + "<br>");
+    document.write("Browser Name: " + navigator.appName + "<br>");
+    document.write("Browser Version: " + navigator.appVersion + "<br>");
+    document.write("<br>");
+
+    var person = {
+        fullName : prompt("Please enter your full name:"),
+        age: getNumber("Please enter your age:"),
+        gender: getChar(),
+        life_expect: function() {
+            if (this.gender == 'M'){
+                return 76 - this.age;
+            }
+            else if(this.gender == 'F'){
+                return 81 - this.age;
+            }
+        },
+        getGender: function() {
+            if (this.gender == "F"){
+                return "Female";
+            }
+            else if (this.gender == "M"){
+                return "Male";
+            }
+        }
+    }
+
+    with (person) {
+        document.write("Person's Properties: <br>");
+        document.write(fullName + "<br>");
+        document.write(age + "<br>");
+        document.write(gender + "<br>");
+        document.write(life_expect() + "<br>");
+        document.write("<br>");
+        document.write("Hi " + fullName + ", as a " + age + " year old " + getGender() +
+                       " you are expected to live " + life_expect() + " more years!")
+    }
+
+</script>
+</body>
+</html>

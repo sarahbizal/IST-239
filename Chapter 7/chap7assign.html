@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chapter 7 Assignment</title>
+
+<script type="text/javascript">
+
+
+    function writeArray(array){
+        for (var i = 0; i < array.length; i++) {
+            document.write(array[i] + "<br>");
+        }
+    }
+
+    function divider(char, length){
+        for (var i = 0; i < length; i++) {
+            document.write(char);
+
+        }
+        document.write("<br>");
+    }
+
+    var books = ["War and Peace", "Huckleberry Fin", "Return of the Native", "A Christmas Carol", "Exodus"];
+    var authors = [];
+    for (var i = 0; i < books.length; i++) {
+        authors[i] = prompt("Please enter the author who wrote " + books[i]);
+    }
+</script>
+
+</head>
+<body>
+    <script type="text/javascript">
+        divider('*', 20);
+        for (var i = 0; i < books.length; i++) {
+            document.write("<b>Book:</b> " + books[i] + " <b>Author:</b> " + authors[i] + "<br>");
+        }
+        
+        var author_title = [];
+        for (var i = 0; i < books.length; i++) {
+            author_title[i] = authors[i] + " wrote " + books[i];
+        }
+        divider('*', 20);
+        writeArray(author_title);
+        author_title.pop();
+        divider('*', 20);
+        writeArray(author_title);
+        divider('*', 20);
+        author_title.sort();
+        writeArray(author_title);
+        divider('*', 20);
+
+    </script>
+
+</body>
+</html>
